@@ -1,0 +1,52 @@
+[
+  {
+    "question": "¿Qué comando crea un controlador en Laravel?",
+    "options": ["php artisan make:controller", "php artisan make:model", "php artisan migrate", "php artisan serve"],
+    "answer": 0
+  },
+  {
+    "question": "¿Qué motor de plantillas usa Laravel?",
+    "options": ["Blade", "Twig", "Smarty", "React"],
+    "answer": 0
+  },
+  {
+    "question": "¿Cuál es el patrón que sigue Laravel?",
+    "options": ["MVC", "MVVM", "MVP", "Singleton"],
+    "answer": 0
+  },
+  {
+    "question": "¿Qué módulo se usa para validación de formularios?",
+    "options": ["Validation", "Routing", "Middleware", "Queue"],
+    "answer": 0
+  },
+  {
+    "question": "¿Qué comando ejecuta las migraciones?",
+    "options": ["php artisan seed", "php artisan migrate", "php artisan make:model", "php artisan tinker"],
+    "answer": 1
+  },
+  {
+    "question": "¿Cómo se define una ruta GET?",
+    "options": ["Route::post()", "Route::put()", "Route::delete()", "Route::get()"],
+    "answer": 3
+  },
+  {
+    "question": "¿Qué módulo gestiona la base de datos?",
+    "options": ["Blade", "Controllers", "Middleware", "Eloquent"],
+    "answer": 3
+  },
+  {
+    "question": "¿Cómo protegemos rutas de usuarios no autenticados?",
+    "options": ["Validation", "Seeder", "Queue", "Middleware auth"],
+    "answer": 3
+  },
+  {
+    "question": "¿Qué clase se usa para enviar emails?",
+    "options": ["Controller", "Job", "Mailable", "Model"],
+    "answer": 2
+  },
+  {
+    "question": "¿Qué archivo contiene las rutas de API?",
+    "options": ["routes/web.php", "app/Models", "resources/views", "routes/api.php"],
+    "answer": 3
+  }
+]

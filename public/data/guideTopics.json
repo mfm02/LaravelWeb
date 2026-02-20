@@ -1,0 +1,90 @@
+[
+  {
+    "id": "routing",
+    "title": "Routing",
+    "description": "Define cómo tu aplicación responde a URLs específicas.",
+    "intro": "En Laravel, las rutas se definen en routes/web.php y pueden apuntar a closures o controladores.",
+    "code": "Route::get('/posts', [PostController::class, 'index']);",
+    "tips": [
+      "Usa nombres de rutas para enlazar URLs fácilmente.",
+      "Agrupa rutas similares con Route::prefix y Route::middleware."
+    ]
+  },
+  {
+    "id": "mvc",
+    "title": "MVC",
+    "description": "Modelo-Vista-Controlador organiza tu código de forma clara.",
+    "intro": "Laravel sigue el patrón MVC para separar la lógica de negocio, la presentación y el control de la aplicación.",
+    "code": "// Modelo (app/Models/Post.php)\nclass Post extends Model {\n    protected $fillable = ['title', 'content'];\n}\n\n// Controlador (app/Http/Controllers/PostController.php)\nclass PostController extends Controller {\n    public function index() {\n        $posts = Post::all();\n        return view('posts.index', compact('posts'));\n    }\n}\n\n// Vista (resources/views/posts/index.blade.php)\n@foreach($posts as $post)\n    <h2>{{ $post->title }}</h2>\n    <p>{{ $post->content }}</p>\n@endforeach",
+    "tips": [
+      "Mantén los controladores delgados y reutiliza modelos.",
+      "Usa vistas Blade para la presentación."
+    ]
+  },
+  {
+    "id": "controllers",
+    "title": "Controllers",
+    "description": "Gestionan la lógica de las rutas.",
+    "intro": "Un controlador puede tener múltiples métodos que responden a diferentes rutas.",
+    "code": "php artisan make:controller PostController",
+    "tips": [
+      "Usa controladores de recursos para CRUD.",
+      "Mantén lógica compleja en servicios."
+    ]
+  },
+  {
+    "id": "blade",
+    "title": "Blade",
+    "description": "Motor de plantillas de Laravel.",
+    "intro": "Blade permite escribir vistas con sintaxis sencilla y herencia de plantillas.",
+    "code": "@extends('layouts.app')\n@section('content')\n<p>Hola mundo</p>\n@endsection",
+    "tips": [
+      "Usa componentes Blade para código reutilizable.",
+      "Evita lógica compleja en vistas."
+    ]
+  },
+  {
+    "id": "eloquent",
+    "title": "Eloquent",
+    "description": "ORM de Laravel para interactuar con la base de datos.",
+    "intro": "Eloquent convierte tablas en clases y filas en objetos para trabajar con PHP.",
+    "code": "$users = User::where('active', 1)->get();",
+    "tips": [
+      "Usa relaciones para consultas complejas.",
+      "Evita queries dentro de las vistas."
+    ]
+  },
+  {
+    "id": "migrations",
+    "title": "Migrations",
+    "description": "Gestiona la estructura de la base de datos.",
+    "intro": "Las migraciones permiten versionar y compartir cambios en la base de datos.",
+    "code": "php artisan make:migration create_posts_table",
+    "tips": [
+      "Usa seeders para datos iniciales.",
+      "Mantén migraciones pequeñas y claras."
+    ]
+  },
+  {
+    "id": "middleware",
+    "title": "Middleware",
+    "description": "Filtra y procesa peticiones antes de llegar a los controladores.",
+    "intro": "Se puede usar para autenticación, logs o restricciones de acceso.",
+    "code": "php artisan make:middleware CheckAge",
+    "tips": [
+      "Aplica middleware solo donde sea necesario.",
+      "Reutiliza middleware para rutas similares."
+    ]
+  },
+  {
+    "id": "validation",
+    "title": "Validation",
+    "description": "Validación de datos entrantes.",
+    "intro": "Laravel permite validar datos de formularios y peticiones de forma sencilla.",
+    "code": "$request->validate(['email' => 'required|email']);",
+    "tips": [
+      "Usa FormRequest para validaciones complejas.",
+      "Mantén reglas claras y descriptivas."
+    ]
+  }
+]

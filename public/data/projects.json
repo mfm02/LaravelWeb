@@ -1,0 +1,74 @@
+[
+  {
+    "id": "blog-app",
+    "title": "Blog App",
+    "objective": "Crear una plataforma para publicar artículos y gestionar usuarios.",
+    "modules": ["Routing", "Controllers", "Blade", "Eloquent", "Auth"],
+    "stack": ["Laravel", "MySQL", "Blade", "TailwindCSS"],
+    "difficulty": "Media",
+    "images": ["/images/projects/blog1.png", "/images/projects/blog2.png"]
+  },
+  {
+    "id": "ecommerce",
+    "title": "E-commerce Básico",
+    "objective": "Tienda online con carrito de compras y sistema de pago simulado.",
+    "modules": ["Controllers", "Eloquent", "Middleware", "Blade", "Validation"],
+    "stack": ["Laravel", "MySQL", "Stripe API", "Blade"],
+    "difficulty": "Alta",
+    "images": ["/images/projects/ecommerce1.png"]
+  },
+  {
+    "id": "task-manager",
+    "title": "Task Manager",
+    "objective": "Aplicación para gestionar tareas y proyectos con usuarios.",
+    "modules": ["Auth", "Controllers", "Eloquent", "Blade", "Middleware"],
+    "stack": ["Laravel", "MySQL", "Bootstrap"],
+    "difficulty": "Media",
+    "images": ["/images/projects/task1.png", "/images/projects/task2.png"]
+  },
+  {
+    "id": "api-blog",
+    "title": "API Blog",
+    "objective": "Exponer API REST para artículos y comentarios.",
+    "modules": ["API", "Controllers", "Eloquent", "Validation"],
+    "stack": ["Laravel", "MySQL", "Postman"],
+    "difficulty": "Media",
+    "images": []
+  },
+  {
+    "id": "forum-app",
+    "title": "Foro de Discusión",
+    "objective": "Permitir a los usuarios crear temas, responder y moderar contenido.",
+    "modules": ["Controllers", "Blade", "Auth", "Middleware", "Eloquent"],
+    "stack": ["Laravel", "MySQL", "Blade", "TailwindCSS"],
+    "difficulty": "Alta",
+    "images": ["/images/projects/forum1.png"]
+  },
+  {
+    "id": "portfolio-site",
+    "title": "Portfolio Personal",
+    "objective": "Sitio web personal con proyectos y sección de contacto.",
+    "modules": ["Blade", "Routing", "Controllers"],
+    "stack": ["Laravel", "Bootstrap", "Email"],
+    "difficulty": "Baja",
+    "images": ["/images/projects/portfolio1.png"]
+  },
+  {
+    "id": "chat-app",
+    "title": "Chat en Tiempo Real",
+    "objective": "Sistema de mensajería interna entre usuarios.",
+    "modules": ["Controllers", "Eloquent", "Broadcasting", "Middleware"],
+    "stack": ["Laravel", "Pusher", "MySQL", "VueJS"],
+    "difficulty": "Alta",
+    "images": ["/images/projects/chat1.png"]
+  },
+  {
+    "id": "event-calendar",
+    "title": "Calendario de Eventos",
+    "objective": "Gestionar y mostrar eventos con filtros y notificaciones.",
+    "modules": ["Controllers", "Eloquent", "Blade", "Validation"],
+    "stack": ["Laravel", "MySQL", "FullCalendar", "Blade"],
+    "difficulty": "Media",
+    "images": ["/images/projects/calendar1.png"]
+  }
+]

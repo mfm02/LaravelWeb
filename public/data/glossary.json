@@ -1,0 +1,7 @@
+[
+  { "term": "Migration", "definition": "Archivo que define la estructura de una tabla en la base de datos." },
+  { "term": "Seeder", "definition": "Archivo que inserta datos iniciales en la base de datos." },
+  { "term": "Facade", "definition": "Clase que ofrece acceso sencillo a componentes internos de Laravel." },
+  { "term": "Eloquent", "definition": "ORM de Laravel para manejar modelos y relaciones." },
+  { "term": "Blade", "definition": "Motor de plantillas de Laravel para vistas." }
+]

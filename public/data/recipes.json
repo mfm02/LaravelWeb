@@ -1,0 +1,134 @@
+[
+  {
+    "id": "eloquent-pagination",
+    "title": "Paginación con Eloquent",
+    "tags": ["eloquent", "database"],
+    "description": "Cómo implementar paginación en consultas Eloquent.",
+    "steps": [
+      "Crear el controlador si no existe.",
+      "Usar el método paginate() en el modelo.",
+      "Pasar los datos a la vista.",
+      "Mostrar enlaces de paginación con links()."
+    ],
+    "code": "$posts = Post::paginate(10);\n\nreturn view('posts.index', compact('posts'));\n\n{{ $posts->links() }}"
+  },
+  {
+    "id": "eloquent-relationship",
+    "title": "Relaciones One-to-Many",
+    "tags": ["eloquent", "database"],
+    "description": "Definir relaciones entre modelos en Laravel.",
+    "steps": [
+      "Definir relación en el modelo padre.",
+      "Definir relación inversa en el modelo hijo.",
+      "Acceder a los datos relacionados."
+    ],
+    "code": "// User.php\npublic function posts() {\n    return $this->hasMany(Post::class);\n}\n\n// Post.php\npublic function user() {\n    return $this->belongsTo(User::class);\n}"
+  },
+  {
+    "id": "auth-login",
+    "title": "Sistema básico de Login",
+    "tags": ["auth", "middleware"],
+    "description": "Implementar autenticación básica en Laravel.",
+    "steps": [
+      "Instalar Laravel Breeze.",
+      "Configurar base de datos.",
+      "Ejecutar migraciones.",
+      "Probar registro y login."
+    ],
+    "code": "composer require laravel/breeze --dev\nphp artisan breeze:install\nphp artisan migrate"
+  },
+  {
+    "id": "auth-middleware-protect",
+    "title": "Proteger rutas con Middleware",
+    "tags": ["auth", "middleware"],
+    "description": "Restringir acceso a rutas autenticadas.",
+    "steps": [
+      "Añadir middleware auth a la ruta.",
+      "Verificar redirección si no está autenticado."
+    ],
+    "code": "Route::get('/dashboard', function () {\n    return view('dashboard');\n})->middleware('auth');"
+  },
+  {
+    "id": "api-resource",
+    "title": "Crear una API REST",
+    "tags": ["api"],
+    "description": "Cómo crear endpoints API en Laravel.",
+    "steps": [
+      "Crear controlador API.",
+      "Definir rutas en api.php.",
+      "Retornar respuestas JSON."
+    ],
+    "code": "Route::apiResource('posts', PostController::class);\n\nreturn response()->json($posts);"
+  },
+  {
+    "id": "api-validation",
+    "title": "Validación en API",
+    "tags": ["api", "validation"],
+    "description": "Validar datos en peticiones API.",
+    "steps": [
+      "Usar request()->validate().",
+      "Retornar errores automáticos en JSON."
+    ],
+    "code": "$validated = $request->validate([\n    'title' => 'required|string|max:255',\n    'content' => 'required'\n]);"
+  },
+  {
+    "id": "form-validation",
+    "title": "Validación de formularios",
+    "tags": ["validation"],
+    "description": "Validar formularios en controladores.",
+    "steps": [
+      "Recibir datos en el método store.",
+      "Aplicar reglas de validación.",
+      "Mostrar errores en la vista."
+    ],
+    "code": "$request->validate([\n    'email' => 'required|email',\n    'password' => 'required|min:6'\n]);"
+  },
+  {
+    "id": "blade-component",
+    "title": "Crear un componente Blade",
+    "tags": ["blade"],
+    "description": "Reutilizar UI con componentes Blade.",
+    "steps": [
+      "Crear componente con artisan.",
+      "Definir vista del componente.",
+      "Usarlo en una plantilla."
+    ],
+    "code": "php artisan make:component Alert\n\n<x-alert type=\"success\" />"
+  },
+  {
+    "id": "queue-job",
+    "title": "Crear y ejecutar un Job en Queue",
+    "tags": ["queue"],
+    "description": "Ejecutar tareas en segundo plano.",
+    "steps": [
+      "Crear Job con artisan.",
+      "Despachar el Job.",
+      "Ejecutar worker."
+    ],
+    "code": "php artisan make:job SendEmailJob\n\nSendEmailJob::dispatch($user);\n\nphp artisan queue:work"
+  },
+  {
+    "id": "mail-send",
+    "title": "Enviar correos en Laravel",
+    "tags": ["mail"],
+    "description": "Enviar correos electrónicos usando Mailable.",
+    "steps": [
+      "Crear clase Mailable.",
+      "Configurar driver SMTP.",
+      "Enviar correo desde controlador."
+    ],
+    "code": "Mail::to($user->email)->send(new WelcomeMail($user));"
+  },
+  {
+    "id": "testing-example",
+    "title": "Testing básico con PHPUnit",
+    "tags": ["testing"],
+    "description": "Cómo crear tests en Laravel.",
+    "steps": [
+      "Crear test con artisan.",
+      "Definir método de prueba.",
+      "Ejecutar php artisan test."
+    ],
+    "code": "php artisan make:test PostTest\n\npublic function test_home_page_loads() {\n    $response = $this->get('/');\n    $response->assertStatus(200);\n}"
+  }
+]

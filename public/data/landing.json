@@ -1,0 +1,9 @@
+{
+  "title": "Bienvenido a la Guía de Laravel",
+  "description": "Aprende qué es Laravel, por qué usarlo y qué encontrarás en esta web: guía completa, recetas prácticas, proyectos y herramientas interactivas.",
+  "cta": [
+    { "text": "Explorar Guía", "link": "/guide" },
+    { "text": "Ver Recetas", "link": "/recipes" },
+    { "text": "Proyectos", "link": "/projects" }
+  ]
+}
