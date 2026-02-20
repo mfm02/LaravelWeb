@@ -1,0 +1,93 @@
+/* CONTENEDOR GENERAL */
+.guide-detail.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* TÍTULOS */
+.guide-detail h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.guide-detail h3 {
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* PÁRRAFOS */
+.guide-detail p {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* BLOQUE DE CÓDIGO */
+.code-block {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 18px;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+/* LISTA PRÁCTICAS */
+.guide-detail ul {
+  padding-left: 20px;
+}
+
+.guide-detail li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* BOTÓN DE FAVORITOS */
+.bookmark-btn {
+  margin-bottom: 25px;
+  padding: 10px 16px;
+  border: 1px solid #ff2d20;
+  background: white;
+  color: #ff2d20;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  background: #ff2d20;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .guide-detail.container {
+    padding: 30px 15px;
+  }
+
+  .guide-detail h1 {
+    font-size: 1.7rem;
+  }
+
+  .guide-detail h3 {
+    font-size: 1.1rem;
+  }
+
+  .code-block {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .bookmark-btn {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}
